@@ -9,15 +9,17 @@ public class Backpack
 	private Ruler ruler;
 	private Textbook textbook;
 
-	Backpack()
+	private void packAndCheck()
 	{
-		System.out.println("Nice Backpack");
+		// Your mission is to go to school.
+		// 1. First you need to put all your supplies into your backpack.
+
+		goToSchool();
 	}
 
 	public static void main(String[] args)
 	{
-		/* Your mission is to get to school, but first you need to get all of your supplies into your backpack. */
-
+		new Backpack().packAndCheck();
 	}
 
 	public void putInBackpack(Supply supply)
