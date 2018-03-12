@@ -3,7 +3,7 @@
 public class RaceCar {
 	private String brand;
 	private int positionInRace;
-	public boolean needsPitStop = false;
+	public boolean damaged = false;
 	
 	/**
 	 * 
@@ -30,11 +30,18 @@ public class RaceCar {
 	}
 	
 	/**
+	 * Checks if car need a pit stop
+	 * @return needsPitStop
+	 */
+	boolean isDamaged() {
+		return damaged;
+	}
+	/**
 	 * Brings the car in for a pit stop.
 	 */
 	public void pit() {
-		if (needsPitStop) {
-			needsPitStop = false;
+		if (damaged) {
+			damaged = false;
 			System.out.println("The car has been pitted.");
 		}
 		else
@@ -48,8 +55,8 @@ public class RaceCar {
 		positionInRace += 3;
 		if (positionInRace > 15) 
 			positionInRace = 15;
-		needsPitStop = true;
-		System.out.println("The car needs a pit stop.");
+		damaged = true;
+		System.out.println("\nYour car has been damaged and needs a pit stop.\nThree cars zoomed by you.");
 	}
 	
 	/**
