@@ -12,7 +12,7 @@ public class Backpack
 	private void packAndCheck()
 	{
 		// Your mission is to go to school.
-		// 1. First you need to put all your supplies into your backpack.
+		// 1. First you need to put all your supplies into your backpack - use the putInBackpack(...) methods
 
 		goToSchool();
 	}
@@ -25,26 +25,40 @@ public class Backpack
 	public void putInBackpack(Pencil supply)
 	{
 		this.pencil = supply;
-		System.out.println("You put your pencil in your Backpack");
+		log(supply);
 	}
 
 	public void putInBackpack(Ruler supply)
 	{
 		this.ruler = supply;
-		System.out.println("You put your ruler in your Backpack");
+		log(supply);
 	}
 
 	public void putInBackpack(Textbook supply)
 	{
 		this.textbook = supply;
-		System.out.println("You put your textbook in your Backpack");
+		log(supply);
+	}
+
+	private void log(Supply supply)
+	{
+		String description;
+		if (supply == null)
+		{
+			description = "null";
+		} else
+		{
+			description = supply.getClass().getSimpleName().toLowerCase();
+		}
+
+		System.out.println("You put " + description + " in your Backpack");
 	}
 
 	public void goToSchool()
 	{
 		if (pencil == null || ruler == null || textbook == null)
 		{
-			System.err.println("You are not ready for School");
+			System.out.println("ERROR: You are not ready for School!");
 		} else
 		{
 			System.out.println("Congratulations! You are ready for school");
