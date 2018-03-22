@@ -22,24 +22,22 @@ public class Backpack
 		new Backpack().packAndCheck();
 	}
 
-	public void putInBackpack(Supply supply)
+	public void putInBackpack(Pencil supply)
 	{
-		if (supply instanceof Pencil)
-		{
-			this.pencil = (Pencil) supply;
-			System.out.println("You put your pencil in your Backpack");
-		} else if (supply instanceof Ruler)
-		{
-			this.ruler = (Ruler) supply;
-			System.out.println("You put your ruler in your Backpack");
-		} else if (supply instanceof Textbook)
-		{
-			this.textbook = (Textbook) supply;
-			System.out.println("You put your textbook in your Backpack");
-		} else
-		{
-			System.out.println("That isn't a valid school supply");
-		}
+		this.pencil = supply;
+		System.out.println("You put your pencil in your Backpack");
+	}
+
+	public void putInBackpack(Ruler supply)
+	{
+		this.ruler = supply;
+		System.out.println("You put your ruler in your Backpack");
+	}
+
+	public void putInBackpack(Textbook supply)
+	{
+		this.textbook = supply;
+		System.out.println("You put your textbook in your Backpack");
 	}
 
 	public void goToSchool()
@@ -54,7 +52,7 @@ public class Backpack
 	}
 }
 
-class Supply
+abstract class Supply
 {
 	protected String name;
 }
