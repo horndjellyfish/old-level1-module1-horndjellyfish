@@ -6,13 +6,13 @@ public class RaceCarRunner {
 		
 		// 1. Create a RaceCar and place it in 5th position
 	
-		// 3. Get the RaceCar to print its position in the race.
+		// 2. Print the RaceCar's position in the race
 
-		// 4. Crash the RaceCar
+		// 3. Crash the RaceCar
 		
-		// 5. If the car is damaged. Bring it in for a pit stop.
+		// 4. If the car is damaged. Bring it in for a pit stop.
 
-		// 6. Help the car move into first place.
+		// 5. Help the car move into first place.
 
 	}
 }
