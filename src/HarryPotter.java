@@ -1,15 +1,3 @@
-/*
- *    Copyright (c) The League of Amazing Programmers 2013-2017
- *    Level 1
- */
- 
-		// Create a HarryRunner class with a main method that:
-		// 1. makes harry potter
-		// 2. become invisible
-		// 3. spy on Professor Snape
-		// 4. become visible again
-		// 5. cast a “stupefy” spell
-
 
 public class HarryPotter {
 
@@ -36,8 +24,21 @@ System.out.println("casting spell: " + spell);
 		System.out.println("Harry sees Professor Snape doing nefarious things.");
 	}
 
+	public static void main(String[] args) {
+		// 1. make harry potter
+			HarryPotter harry = new HarryPotter();
+		// 2. become invisible
+			harry.makeInvisible(true);
+		// 3. spy on professor snape
+			harry.spyOnSnape();
+		// 4. become visible again
+			harry.makeInvisible(false);
+		// 5. cast a “stupefy” spell
+			harry.castSpell("Stupefy!");
+	}
 
 }
+
 
 
 
