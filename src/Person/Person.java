@@ -7,14 +7,14 @@ public class Person {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 	public String getSuperpower() {
 		return superpower;
 	}
-	public void setSuperpower(String superpower) {
+	void setSuperpower(String superpower) {
 		this.superpower = superpower;
 	}
-
+	
 }
